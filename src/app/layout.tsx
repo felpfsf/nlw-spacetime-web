@@ -1,3 +1,4 @@
+import Sidebar from "@/components/Sidebar";
 import {
   Bai_Jamjuree as BaiJamjuree,
   Roboto_Flex as Roboto,
@@ -20,8 +21,13 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt">
-      <body className={`${roboto.variable} ${baijamjuree.variable} font-sans`}>
-        {children}
+      <body
+        className={`${roboto.variable} ${baijamjuree.variable} grid min-h-screen grid-cols-2 font-sans`}
+      >
+        <Sidebar />
+        <main className="flex flex-col bg-[url(../assets/stars.svg)] bg-cover p-16">
+          {children}
+        </main>
       </body>
     </html>
   );
