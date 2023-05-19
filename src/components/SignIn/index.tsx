@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { User } from "lucide-react";
 
 const SignIn = () => {
@@ -7,12 +8,12 @@ const SignIn = () => {
         <User size={20} className="text-gray-500" />
       </span>
       <p className="max-w-[140px] text-sm leading-snug text-gray-100">
-        <a
+        <Link
           href={`https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}`}
           className="underline underline-offset-2"
         >
-          Crie sua conta
-        </a>{" "}
+          Crie sua conta com o github
+        </Link>{" "}
         e salve suas memórias
       </p>
     </div>
