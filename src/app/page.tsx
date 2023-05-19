@@ -1,5 +1,5 @@
-import NoMemories from "@/components/NoMemories";
+import EmptyMemories from "@/components/EmptyMemories";
 
 export default function Home() {
-  return <NoMemories />;
+  return <EmptyMemories />;
 }
