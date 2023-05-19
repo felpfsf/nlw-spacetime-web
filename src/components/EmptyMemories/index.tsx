@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const NoMemories = () => {
+const EmptyMemories = () => {
   return (
     <div className="flex flex-1 items-center justify-center">
       <p className="max-w-[360px] text-center leading-relaxed text-gray-100">
@@ -13,4 +13,4 @@ const NoMemories = () => {
   );
 };
 
-export default NoMemories;
+export default EmptyMemories;
