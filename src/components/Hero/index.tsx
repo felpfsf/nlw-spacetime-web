@@ -16,7 +16,7 @@ const Hero = () => {
         </p>
       </div>
       <Link
-        href={"/"}
+        href={"/memory/compose"}
         className="self-start rounded-full bg-green-500 px-5 py-3 font-alt font-bold leading-none text-black transition-colors duration-200 ease-in-out hover:bg-green-700"
       >
         CADASTRAR LEMBRANÇA
