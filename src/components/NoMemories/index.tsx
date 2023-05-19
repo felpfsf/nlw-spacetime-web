@@ -5,7 +5,7 @@ const NoMemories = () => {
     <div className="flex flex-1 items-center justify-center">
       <p className="max-w-[360px] text-center leading-relaxed text-gray-100">
         Você ainda não registrou nenhuma lembrança, comece a{" "}
-        <Link href={"/"} className="underline underline-offset-2">
+        <Link href={"/memory/compose"} className="underline underline-offset-2">
           criar agora!
         </Link>
       </p>
