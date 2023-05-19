@@ -4,6 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const code = searchParams.get("code");
+  const redirectTo = request.cookies.get("redirectTo")?.value;
 
   const registerResponse = await api.post("/api/auth/register", {
     code,
@@ -11,9 +12,7 @@ export async function GET(request: NextRequest) {
 
   const { spacetimeToken } = registerResponse.data;
 
-  console.log(spacetimeToken);
-
-  const redirectURL = new URL("/", request.url);
+  const redirectURL = redirectTo ?? new URL("/", request.url);
 
   const expiresInSeconds = 60 * 60 * 24 * 30;
 
