@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         className={`${roboto.variable} ${baijamjuree.variable} grid min-h-screen grid-cols-2 font-sans`}
       >
         <Sidebar />
-        <main className="flex flex-col bg-[url(../assets/stars.svg)] bg-cover p-16">
+        <main className="flex max-h-screen flex-col overflow-auto bg-[url(../assets/stars.svg)] bg-cover">
           {children}
         </main>
       </body>
