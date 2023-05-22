@@ -1,4 +1,5 @@
 import EmptyMemories from "@/components/EmptyMemories";
+import MemoryCard, { MemoryProps } from "@/components/MemoryCard";
 import { api } from "@/lib/api";
 import { cookies } from "next/headers";
 
@@ -16,9 +17,14 @@ export default async function Home() {
     },
   });
 
-  const memories = response.data;
-  console.log(response.data)
-  console.log(token)
+  const memories: MemoryProps[] = response.data;
+  console.log(memories);
 
-  return <div>{JSON.stringify(memories)}</div>;
+  return (
+    <div className="flex flex-col gap-10 p-8">
+      {memories.map((memory) => (
+        <MemoryCard key={memory.id} {...memory} />
+      ))}
+    </div>
+  );
 }
